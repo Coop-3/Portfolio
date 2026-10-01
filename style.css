@@ -1,0 +1,160 @@
+/* ==========================================================
+   BASE STYLES: intentionally plain so you can make it yours.
+   Start by changing the variables below (colors, fonts, widths).
+   ========================================================== */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f5f5f4;
+  --text: #1c1c1c;
+  --muted: #5f5f5f;
+  --border: #e0e0de;
+  --accent: #2f5bd8;
+  --accent-text: #ffffff;
+
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; /* TODO: pick your own font */
+  --max-width: 1000px;
+  --radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151515;
+    --surface: #1f1f1f;
+    --text: #ececec;
+    --muted: #a3a3a3;
+    --border: #333333;
+    --accent: #7c9cff;
+    --accent-text: #11131a;
+  }
+}
+
+/* ---------- Reset & base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+img { max-width: 100%; display: block; }
+a { color: var(--accent); }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5em; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.2rem; }
+p { margin: 0 0 1em; max-width: 68ch; }
+ul { padding-left: 1.2em; }
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+
+.container { width: min(100% - 2rem, var(--max-width)); margin-inline: auto; }
+.section { padding-block: 3rem; border-top: 1px solid var(--border); }
+.lead { font-size: 1.25rem; color: var(--muted); }
+.recognition { color: var(--muted); font-size: 0.95rem; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--accent); color: var(--accent-text); padding: 0.5rem 1rem;
+}
+.skip-link:focus { left: 0; z-index: 100; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; min-height: 3.5rem; }
+.brand { font-weight: 700; color: var(--text); text-decoration: none; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a { color: var(--text); text-decoration: none; }
+.nav-links a:hover { color: var(--accent); }
+.nav-toggle {
+  display: none; font: inherit; color: var(--text);
+  background: none; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 0.3rem 0.8rem; cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .nav { flex-wrap: wrap; }
+  .nav-toggle { display: block; }
+  .nav-links { display: none; flex-direction: column; gap: 0; width: 100%; padding-bottom: 0.75rem; }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.6rem 0; }
+}
+
+/* ---------- Hero & buttons ---------- */
+.hero { padding-block: 4rem 3rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-block: 1.5rem; }
+.button {
+  display: inline-block; padding: 0.65rem 1.25rem; border-radius: var(--radius);
+  background: var(--accent); color: var(--accent-text);
+  text-decoration: none; font-weight: 600; border: 1px solid var(--accent);
+}
+.button.secondary { background: transparent; color: var(--accent); }
+.button:hover { opacity: 0.88; }
+
+/* ---------- Project cards ---------- */
+.grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.card {
+  position: relative; display: flex; flex-direction: column;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--surface); overflow: hidden;
+}
+.card:hover { border-color: var(--accent); }
+.card-image { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.card-body { padding: 1rem 1.25rem 1.25rem; }
+.card-body p { margin-bottom: 0.75rem; }
+.card-category { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.25rem; }
+.card-link { color: var(--text); text-decoration: none; }
+.card-link::after { content: ""; position: absolute; inset: 0; } /* makes the whole card clickable */
+
+.placeholder {
+  display: grid; place-items: center; text-align: center; padding: 1rem;
+  background: var(--border); color: var(--muted); font-size: 0.9rem;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; padding: 0; margin: 0; }
+.tags li {
+  font-size: 0.85rem; padding: 0.1rem 0.6rem;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--bg);
+}
+
+/* ---------- About / skills / contact ---------- */
+.about { display: flex; gap: 2rem; align-items: flex-start; }
+.about-photo img { width: 180px; height: 180px; object-fit: cover; border-radius: var(--radius); }
+.skills { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.skill-group h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+.skill-group p { color: var(--muted); }
+.contact-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+
+@media (max-width: 640px) { .about { flex-direction: column; } }
+
+/* ---------- Project page ---------- */
+.project-page { padding-block: 2.5rem 4rem; }
+.project-hero { width: 100%; max-height: 480px; object-fit: cover; border-radius: var(--radius); margin-block: 1.5rem; }
+.project-hero.placeholder { min-height: 240px; }
+.facts {
+  display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin: 1.5rem 0 2rem; padding: 1rem 1.25rem;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+}
+.facts dt { color: var(--muted); font-size: 0.9rem; }
+.facts dd { margin: 0; }
+.project-section { margin-block: 2rem; }
+.gallery { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.gallery img { border-radius: var(--radius); border: 1px solid var(--border); }
+.link-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.project-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+
+/* ---------- Footer ---------- */
+.site-footer { padding-block: 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+.site-footer p { margin: 0; }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio of web development, dashboard, and research projects.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" id="brand" href="index.html"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <nav id="nav-links" class="nav-links" aria-label="Main">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#about">About</a>
+        <a id="nav-resume" href="#">Resume</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container hero">
+      <h1 id="hero-name"></h1>
+      <p class="lead" id="hero-title"></p>
+      <p id="hero-intro"></p>
+      <div class="actions">
+        <a class="button" href="#projects">View projects</a>
+        <a class="button secondary" id="hero-resume" href="#">Download resume</a>
+      </div>
+      <p class="recognition" id="recognition"></p>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>Projects</h2>
+      <div id="project-grid" class="grid"></div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>About</h2>
+      <div class="about">
+        <div id="about-photo" class="about-photo"></div>
+        <div id="about-text" class="about-text"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="container section">
+      <h2>Skills</h2>
+      <div id="skills-list" class="skills"></div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <p>Interested in working together? Get in touch.</p>
+      <div id="contact-links" class="contact-links"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p id="footer-text"></p></div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
