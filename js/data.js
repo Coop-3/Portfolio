@@ -6,17 +6,18 @@
    ========================================================== */
 
 const SITE = {
-  name: "Your Name", // TODO
-  title: "Computer science graduate building web apps and data-driven dashboards", // TODO tweak
-  intro: "TODO: One or two sentences on what you build and what kind of work you're looking for.",
-  email: "you@example.com", // TODO
-  github: "https://github.com/your-username", // TODO
-  linkedin: "https://www.linkedin.com/in/your-profile", // TODO
+  name: "Makayla Coleman",
+  title: "Computer science graduate building web apps and data-driven dashboards",
+  intro:
+    "I build full-stack web applications and dashboards, and I'm looking for frontend, full stack, and AI-focused software roles.",
+  email: "you@example.com", // TODO: the email you want on your portfolio
+  github: "https://github.com/Coop-3",
+  linkedin: "https://linkedin.com/in/makayla-coleman-152b642ba",
   resume: "assets/resume.pdf", // TODO: put your resume PDF in the assets folder
   photo: "", // e.g. "assets/me.jpg" (optional)
 
   // Short line shown under the hero. Leave "" to hide.
-  recognition: "Presented at CSCENCES 2026 · Shark Tank competition submission",
+  recognition: "Presented at CCSCNE 2026 · Shark Tank competition submission", // TODO: confirm the conference name
 
   about: [
     "TODO: A short paragraph about you: your background, what you enjoy building, and what you're aiming for.",
@@ -25,10 +26,10 @@ const SITE = {
 
   // Only list what you'd be comfortable being asked about in an interview.
   skills: {
-    Languages: ["TODO"],
-    Frontend: ["TODO"],
-    "Backend & data": ["TODO"],
-    Tools: ["TODO"],
+    Languages: ["JavaScript", "Python", "Java", "C++", "PHP"],
+    Frontend: ["React", "HTML5", "CSS3", "Bootstrap", "Vite"],
+    "Backend & data": ["Node.js", "Express", "MongoDB", "SQLite", "Memcached"],
+    Tools: ["Git & GitHub", "Figma", "Canva", "Linux (Ubuntu)"],
   },
 };
 
@@ -45,27 +46,48 @@ const PROJECTS = [
     id: "connect-plus",
     title: "Connect Plus",
     category: "Independent study",
-    summary: "A dashboard system built as a senior-year independent study project.",
-    image: "",
-    role: "TODO",
-    timeframe: "Senior year", // TODO add semester/year
-    team: "TODO (solo or team?)",
-    stack: ["TODO"],
-    recognition:
-      "Presented at CSCENCES 2026 (written into the national computer science archive) and submitted to a broadcast Shark Tank competition judged by business clients.",
-    problem: "TODO: What problem was the dashboard solving, and for whom?",
-    built: [
-      "TODO: Key feature 1",
-      "TODO: Key feature 2",
-      "TODO: Key feature 3",
+    summary:
+      "A full-stack project management app that brings tasks, alerts, messaging, and a dashboard into one workspace so teams don't have to juggle scattered tools.",
+    image: "", // TODO: e.g. "assets/connect-plus-dashboard.png"
+    role: "Led all phases: system design, frontend and backend, database modeling, and testing",
+    timeframe: "Senior year", // TODO: add semester/year
+    team: "Independent study (paper co-authored with Dr. Unnati Shah)",
+    stack: [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express",
+      "MongoDB Atlas",
+      "Mongoose",
+      "Bootstrap",
+      "bcrypt",
+      "Figma",
     ],
-    contribution: "TODO: What you personally designed and built.",
-    results: ["TODO: Outcomes, numbers, feedback from the conference or competition"],
-    screenshots: [],
+    recognition:
+      "Presented at CCSCNE 2026 (Consortium for Computing Sciences in Colleges), written into the national computer science archive, and submitted to a broadcast Shark Tank competition judged by business clients.",
+    problem:
+      "Group work often ends up scattered across texts, email, shared documents, and chat apps, which leads to missed updates, unclear responsibilities, and lost information. Connect Plus is a lightweight, centralized place for students, instructors, and coworkers to manage tasks and share updates.",
+    built: [
+      "Authentication with email validation, password complexity rules, bcrypt password hashing, and email-based password reset",
+      "Task management: create, edit, archive with a completion checkbox, and permanently delete while saving details to a Task History collection, plus a summary/history view",
+      "Alerts with a title, project, description, priority, creator, and resolved status, stored in MongoDB",
+      "A dashboard with navigation to My Tasks, Projects, Messages, Alerts, and Settings",
+      "A messaging prototype (static messages, with real-time messaging planned)",
+      "A three-layer architecture (React client, Express server, MongoDB) with feature-based routes, controllers, and data models",
+    ],
+    contribution:
+      "I led every phase of the project: system design, frontend and backend implementation, database modeling, and testing. I taught myself React and Node.js while building it, along with password security practices and API design. It was my first independent study and my largest project.",
+    results: [
+      "Task management, authentication, and alerts were tested end to end against MongoDB; task management was the most complete module",
+      "Presented the project and a paper at CCSCNE 2026",
+      "Submitted to a broadcast Shark Tank competition judged by business clients",
+      "Still an early-stage prototype: messaging is a placeholder, and real-time updates (WebSockets), file attachments, filtering, and role-based visibility are planned",
+    ],
+    screenshots: [], // TODO: export the dashboard, tasks, alerts, and login screenshots into assets/
     links: [
+      { label: "GitHub", url: "https://github.com/Coop-3/Project-management-app" },
+      { label: "Paper", url: "" }, // TODO: link to the conference paper or archive entry
       { label: "Live demo", url: "" },
-      { label: "GitHub", url: "" },
-      { label: "Conference archive entry", url: "" },
     ],
   },
   {
@@ -102,7 +124,7 @@ const PROJECTS = [
       "A food expiration app built by a team for a senior-year software engineering class, documented and presented as if for a real company.",
     image: "",
     role: "TODO",
-    timeframe: "Senior year", // TODO add semester/year
+    timeframe: "Senior year", // TODO: add semester/year
     team: "TODO (team size)",
     stack: ["TODO"],
     recognition: "",
@@ -126,25 +148,33 @@ const PROJECTS = [
     title: "Memcached Resilience Research",
     category: "Research",
     summary:
-      "Test engineering to find bottlenecks in Memcached, plus a system solution and improved system networking to fix them.",
-    image: "",
-    role: "TODO",
+      "Research on keeping Memcached fast when the cache fails, using Resilient Caching Strategies (RCS) and Cache Transaction Integrity (CTI) with a database fallback.",
+    image: "assets/memcached-poster.png",
+    role: "Test engineering and system design for the fallback solution", // TODO: adjust to what you personally did
     timeframe: "TODO",
-    team: "TODO",
-    stack: ["Memcached", "TODO"],
+    team: "With Kate Vaughan; advisor Dr. Unnati Shah",
+    stack: ["Python", "Memcached", "pymemcache", "SQLite", "Ubuntu (VMware, WSL)", "Chart.js"],
     recognition: "",
-    problem: "TODO: Which bottleneck you found and why it matters for resilience.",
+    problem:
+      "When a cache fails, requests fall through to slower disk-based databases. That means higher latency, a poorer user experience, and a database bottleneck as the number of users grows.",
     built: [
-      "TODO: How you tested and measured the bottleneck",
-      "TODO: The system solution you designed",
-      "TODO: The networking improvements you implemented",
+      "A Python test that sends 1,000 queries to a local Memcached server and simulates cache failures with a 10% random eviction rate",
+      "A fallback strategy: on a cache miss, the value is read from a SQLite database and restored to Memcached",
+      "Reporting of failure rate, transactions per second (TPS), and requests per second (RPS)",
+      "A latency comparison graph and research poster contrasting regular Memcached with the RCS/CTI fallback approach",
     ],
-    contribution: "TODO: Your specific role.",
-    results: ["TODO: Before/after numbers. Add charts as screenshots."],
-    screenshots: [],
+    contribution:
+      "TODO: Describe your part in 2-3 sentences, for example: I ran the test engineering to find the bottleneck in Memcached, then worked on a system solution and improved system networking to address it.",
+    results: [
+      "Hypothesis: a database fallback with RCS/CTI keeps Memcached more resilient during and after a cache failure",
+      "Latency comparison from my research and reading: regular Memcached 10 ms before a failure, 500 ms during, 250 ms after; with the RCS/CTI fallback 10 ms, 300 ms, and 120 ms (about 1.67x and 2.08x faster). These illustrate the expected difference and are not output by the test script.",
+      "Example test run: 1,000 requests, 99 cache misses (9.90%), 121.30 TPS, 109.29 RPS, with each miss recovered from the SQLite fallback",
+      "Next step: time individual requests and add a no-fallback baseline for a direct comparison",
+    ],
+    screenshots: ["assets/memcached-test-original.png"], // TODO: also add your current-script screenshot, e.g. "assets/memcached-test-current.png"
     links: [
-      { label: "Paper / write-up", url: "" },
-      { label: "GitHub", url: "" },
+      { label: "GitHub", url: "https://github.com/Coop-3/Mechached-Resilience-Test" },
+      { label: "Research poster", url: "assets/memcached-poster.png" },
     ],
   },
 ];
