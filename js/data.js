@@ -10,10 +10,10 @@ const SITE = {
   title: "Computer science graduate building web apps and data-driven dashboards",
   intro:
     "I build full-stack web applications and dashboards, and I'm looking for frontend, full stack, and AI-focused software roles.",
-  email: "you@example.com", // TODO: the email you want on your portfolio
+  email: "Makaylacolemans11@gmail.com", // TODO: the email you want on your portfolio
   github: "https://github.com/Coop-3",
   linkedin: "https://linkedin.com/in/makayla-coleman-152b642ba",
-  resume: "assets/resume.pdf", // TODO: put your resume PDF in the assets folder
+  resume: "assets/Makayla_Coleman_Resume(updated on 10_1_26).pdf", // TODO: put your resume PDF in the assets folder
   photo: "", // e.g. "assets/me.jpg" (optional)
 
   // Short line shown under the hero. Leave "" to hide.
