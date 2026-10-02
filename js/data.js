@@ -91,29 +91,34 @@ const PROJECTS = [
     ],
   },
   {
-    id: "cavline-dashboard",
+   id: "cavline-dashboard",
     title: "Cavline Internship Dashboard",
     category: "Internship",
     summary:
-      "A dashboard for onboarding data collection, team organization, and outreach tracking, using Google APIs for maps and local businesses.",
-    image: "",
-    role: "TODO (e.g. Software Engineering Intern)",
-    timeframe: "TODO",
-    team: "TODO",
-    stack: ["Google APIs (Maps)", "TODO"],
+      "A communication and outreach dashboard I built as a frontend developer intern to track screen onboarding, plan daily Google Maps routes, and keep the team organized.",
+    image: "", // TODO: use a mock or sanitized screenshot, not real business data
+    role: "Frontend Developer Intern",
+    timeframe: "Summer 2026", // TODO: confirm the exact months
+    team: "Onboarding team at Cavline Co.",
+    stack: ["Google Maps API", "TODO: add the frameworks and tools you used"],
     recognition: "",
     problem:
-      "TODO: What the team struggled with before (tracking outreach, coordinating goals, etc.).",
+      "The team needed one place to find businesses with TV screens to onboard, keep notes on every conversation, and track progress toward weekly and monthly goals, instead of spreading that information across different tools and people.",
     built: [
-      "Data collection on onboarding screens",
-      "Team organization and tracking",
-      "Google APIs for maps and coordinating local businesses",
-      "Tracking who the team communicated with and reached out to",
-      "Collaboration features with checkmarks for meetings plus weekly and monthly goals",
+      "A team hub for screen onboarding, data collection, team organization, and outreach tracking",
+      "Google API integration to map local businesses with TV screens that could be onboarded",
+      "A daily route builder that groups 10 businesses per day, orders them from closest to farthest by coordinates, and opens the whole route in Google Maps with one button, so no one drives back and forth across the city",
+      "Outreach tracking for each business: who was spoken to, their contact details, notes, and when to come back if no one was there, all visible to teammates and partners",
+      "Weekly and monthly goal trackers for screens, plus campaign tracking and a count of fully onboarded businesses",
+      "A status for each business (fully onboarded, considering, needs more information, or needs a revisit)",
     ],
-    contribution: "TODO: Your specific role.",
-    results: ["TODO: Impact on the team (numbers if you have them)"],
-    screenshots: [], // Use sanitized/mock screenshots unless Cavline approves real ones
+    contribution:
+      "I was the frontend developer, building the dashboard interface the whole team used as their home base for communication and organization. TODO: add anything backend, design, or integration work you also handled.",
+    results: [
+      "The dashboard became the team's central hub for tracking outreach, notes, and goals",
+      "TODO: add numbers if you have them (team size, businesses tracked, screens onboarded, time saved on routes)",
+    ],
+    screenshots: [], // Use mock data and screenshots; do not show real business names or contact details
     links: [],
   },
   {
