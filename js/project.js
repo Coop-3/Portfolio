@@ -39,7 +39,7 @@ if (index === -1) {
     h("h1", {}, project.title),
     h("p", { class: "lead" }, project.summary),
     project.recognition ? h("p", { class: "recognition" }, project.recognition) : null,
-    projectImage(project, "project-hero"),
+    project.image ? projectImage(project, "project-hero") : null,
 
     h(
       "dl",

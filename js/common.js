@@ -58,5 +58,5 @@ function projectImage(project, className) {
       loading: "lazy",
     });
   }
-  return h("div", { class: className + " placeholder" }, "Add a screenshot in data.js");
+  return h("div", { class: className + " placeholder" }, project.title);
 }
