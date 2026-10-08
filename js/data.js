@@ -10,14 +10,14 @@ const SITE = {
   title: "Computer science graduate building web apps and data-driven dashboards",
   intro:
     "I build full-stack web applications and dashboards, and I'm looking for frontend, full stack, and AI-focused software roles.",
-  email: "Makaylacolemans11@gmail.com", // TODO: the email you want on your portfolio
+  email: "Makaylacolemans11@gmail.com", 
   github: "https://github.com/Coop-3",
   linkedin: "https://linkedin.com/in/makayla-coleman-152b642ba",
-  resume: "assets/Makayla_Coleman_Resume(updated on 10_1_26).pdf", // TODO: put your resume PDF in the assets folder
+  resume: "assets/Makayla_Coleman_Resume(updated on 10_1_26).pdf", 
   photo: "", // e.g. "assets/me.jpg" (optional)
 
   // Short line shown under the hero. Leave "" to hide.
-  recognition: "Presented at CCSCNE 2026 · Shark Tank competition submission", // TODO: confirm the conference name
+  recognition: "Presented at CCSCNE 2026 · Utica University Shark Tank competition submission", 
 
   about: [
     "TODO: A short paragraph about you: your background, what you enjoy building, and what you're aiming for.",
@@ -50,7 +50,7 @@ const PROJECTS = [
       "A full-stack project management app that brings tasks, alerts, messaging, and a dashboard into one workspace so teams don't have to juggle scattered tools.",
     image: "", // TODO: e.g. "assets/connect-plus-dashboard.png"
     role: "Led all phases: system design, frontend and backend, database modeling, and testing",
-    timeframe: "Senior year", // TODO: add semester/year
+    timeframe: "Senior year, spring 2026", // TODO: add semester/year
     team: "Independent study (paper co-authored with Dr. Unnati Shah)",
     stack: [
       "React",
@@ -129,7 +129,7 @@ const PROJECTS = [
       "A food expiration app built by a team for a senior-year software engineering class, documented and presented as if for a real company.",
     image: "",
     role: "TODO",
-    timeframe: "Senior year", // TODO: add semester/year
+    timeframe: "Senior year,Spring 2026", // TODO: add semester/year
     team: "TODO (team size)",
     stack: ["TODO"],
     recognition: "",
