@@ -24,7 +24,7 @@ const SITE = {
     "TODO: (Optional) A second paragraph about your interests in frontend, full stack, and AI.",
   ],
 
-  // Only list what you'd be comfortable being asked about in an interview.
+  
   skills: {
     Languages: ["JavaScript", "Python", "Java", "C++", "PHP"],
     Frontend: ["React", "HTML5", "CSS3", "Bootstrap", "Vite"],
@@ -48,7 +48,7 @@ const PROJECTS = [
     category: "Independent study",
     summary:
       "A full-stack project management app that brings tasks, alerts, messaging, and a dashboard into one workspace so teams don't have to juggle scattered tools.",
-    image: "assets/Logo 1.png", 
+    image: "assets/Logo1.png", 
     role: "Led all phases: system design, frontend and backend, database modeling, and testing",
     timeframe: "Senior year, spring 2026", 
     team: "Independent study (paper co-authored with Dr. Unnati Shah)",
@@ -82,7 +82,7 @@ const PROJECTS = [
       "Submitted to a broadcast Shark Tank competition at Utica University judged by business clients",
       "Still an early-stage prototype: messaging is a placeholder, and real-time updates (WebSockets), file attachments, filtering, and role-based visibility are planned",
     ],
-    screenshots: [ "assets/Dashboard_Module.png","assets/Projects_Module.png","assets/Alerts_Module.png","assets/Login_Signup.png"], 
+    screenshots: [ "assets/Dashboard_Module.png","assets/Project_Module.png","assets/Alerts_Module.png","assets/login_signup.png"], 
     links: [
       { label: "GitHub", url: "https://github.com/Coop-3/Project-management-app" },
       { label: "Paper", url: "https://dl.acm.org/doi/10.5555/3820586.3820615" }, 
