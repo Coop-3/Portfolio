@@ -153,9 +153,8 @@ const PROJECTS = [
     category: "Research",
     summary:
       "Research on keeping Memcached fast when the cache fails, using Resilient Caching Strategies (RCS) and Cache Transaction Integrity (CTI) with a database fallback.",
-    image: "",
     role: "Test engineering and system design for the fallback solution", 
-    timeframe: "TODO",
+    timeframe: "Spring semester, 2025",
     team: "With Kate Vaughan; advisor Dr. Unnati Shah",
     stack: ["Python", "Memcached", "pymemcache", "SQLite", "Ubuntu (VMware, WSL)", "Chart.js"],
     recognition: "",
@@ -178,7 +177,7 @@ const PROJECTS = [
     screenshots: ["assets/with_RSC_CTI.png","assets/without_RSC_CTI.png"], 
     links: [
       { label: "GitHub", url: "https://github.com/Coop-3/Mechached-Resilience-Test" },
-      { label: "Research poster", url: "assets/Scaling_memcached_poster.pdf.pdf" },
+      { label: "Research poster", url: "assets/Scaling_memcached_poster.pdf" },
     ],
   },
 ];
