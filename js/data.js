@@ -153,7 +153,7 @@ const PROJECTS = [
     category: "Research",
     summary:
       "Research on keeping Memcached fast when the cache fails, using Resilient Caching Strategies (RCS) and Cache Transaction Integrity (CTI) with a database fallback.",
-    image: ,
+    image: "",
     role: "Test engineering and system design for the fallback solution", 
     timeframe: "TODO",
     team: "With Kate Vaughan; advisor Dr. Unnati Shah",
