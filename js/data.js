@@ -99,7 +99,7 @@ const PROJECTS = [
     role: "Frontend Developer Intern",
     timeframe: "Summer 2026", 
     team: "Onboarding team at Cavline Co.",
-    stack: ["Google Maps API", "TODO: add the frameworks and tools you used"],
+    stack: ["Google Maps API tokens", "JavaScript", "Ui/ux max pro extension", "vercel"],
     recognition: "",
     problem:
       "The team needed one place to find businesses with TV screens to onboard, keep notes on every conversation, and track progress toward weekly and monthly goals, instead of spreading that information across different tools and people.",

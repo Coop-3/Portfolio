@@ -34,7 +34,8 @@ if (index === -1) {
 
   const links = (project.links || []).filter((link) => link.url);
 
-  root.append(
+  // Native append() prints the text "null" for empty items, so drop them first
+  root.append(...[
     h("p", { class: "card-category" }, project.category),
     h("h1", {}, project.title),
     h("p", { class: "lead" }, project.summary),
@@ -96,5 +97,5 @@ if (index === -1) {
       h("a", { href: "index.html#projects" }, "All projects"),
       h("a", { href: "project.html?id=" + next.id }, "Next: " + next.title)
     )
-  );
+  ].filter(Boolean));
 }
